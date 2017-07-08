@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:Ambient" 
+    x:Class="Ambient.AmbientPage"
+    BackgroundImage="StayFrostyBackground.png"
+    >
+
+        <StackLayout>
+    <Label  Text=" " 
+                Font="Large"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand" />
+
+                <Label  Text=" " 
+                Font="Large"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand" />
+
+        <Entry x:Name="username" Text="test" />
+        <Entry x:Name="password" Text="test" IsPassword="true" />
+
+        <Button Text="Log in"
+            TextColor="White"
+                BorderColor="White"
+                BorderWidth="2"
+            HorizontalOptions="FillAndExpand"
+            VerticalOptions="CenterAndExpand"
+            Clicked="OnButtonClicked" />
+    </StackLayout>
+    
+</ContentPage>

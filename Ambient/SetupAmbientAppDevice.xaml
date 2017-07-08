@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Ambient.SetupAmbientAppDevice">
+<AbsoluteLayout >
+        
+        <StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+            
+            <ListView x:Name="WirelessAPList" ItemSelected="OnItemSelected" Refreshing="OnRefresh">
+              <ListView.ItemTemplate>
+                <DataTemplate>
+                  <ViewCell>
+                     <StackLayout Padding="15,0">
+                         <Label Text="{Binding .}" />
+                     </StackLayout>
+                  </ViewCell>
+                </DataTemplate>
+              </ListView.ItemTemplate>
+            </ListView>
+            
+            <Entry x:Name="PasswordEntry" Placeholder="Password" />
+
+            <Button x:Name="SetupAP" Text="Setup" Clicked="SetupWirelessAP" />
+        </StackLayout>
+
+        <ActivityIndicator x:Name="actIndicator"
+                AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1" />
+    </AbsoluteLayout>
+</ContentPage>

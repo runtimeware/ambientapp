@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Ambient.AmbientItemStatusContentView">
+	<ContentView.Content>
+        <StackLayout Spacing="0" Padding="0">
+            <Grid Style="{DynamicResource CardStyle}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="100"/>
+                </Grid.ColumnDefinitions>
+
+                <StackLayout Grid.Column="0" Spacing="0" Padding="0,5">
+                    <Label Text="{Binding Name}" Style="{DynamicResource NameStyle}"/>
+                    <Label Text="{Binding LastHeard}" Style="{DynamicResource DepartmentStyle}"/>
+                </StackLayout>
+                <!--
+                <StackLayout Grid.Column="0" Spacing="0" Padding="0" VerticalOptions="End">
+                    <Label Text="Binding LastHeard}" Style="{DynamicResource LocationStyle}"/>
+                </StackLayout>
+                <StackLayout Grid.Column="0" Orientation="Horizontal" Spacing="4" HorizontalOptions="End" Padding="0" VerticalOptions="End">
+                        <Label Text="{Binding AlarmCount}" FontAttributes="Bold" Style="{DynamicResource SocialStyle}"/> 
+                        <Label Text="Alarms" Style="{DynamicResource SocialStyle}"/>
+                    </StackLayout>
+                -->
+                <Label Grid.Column="1" Text="-15.3&#176;" Style="{DynamicResource MoreStyle}"/> 
+            </Grid>
+
+            <BoxView Style="{DynamicResource ShadowStyle}"></BoxView>
+        </StackLayout>
+        
+	</ContentView.Content>
+</ContentView>
